@@ -7,13 +7,36 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    /**
-     
-     * Write your code here!
-     
-     */
+    NSString *talkToGrandma = @"Hello world, grandma!";
+    NSString *shoutAtGrandma = [talkToGrandma uppercaseString];
     
-    return YES; // Don't alter this statement.
+    BOOL shouting = [talkToGrandma isEqualToString:shoutAtGrandma];
+    
+    if (shouting) {
+        NSLog(@"NO, NOT SINCE 1939!");
+    } else {
+        NSLog(@"WHAT'S THAT? SPEAK UP, RYAN!");
+    }
+    
+    if ([talkToGrandma isEqualToString:shoutAtGrandma]) {
+        NSLog(@"NO, NOT SINCE 1939!");
+    } else {
+        NSLog(@"WHAT'S THAT? SPEAK UP, RYAN!");
+    }
+    
+    if (!shouting) {
+        NSLog(@"NO, NOT SINCE 1939!");
+    } else {
+        NSLog(@"WHAT'S THAT? SPEAK UP, RYAN!");
+    }
+    
+    if (![talkToGrandma isEqualToString:shoutAtGrandma]) {
+        NSLog(@"NO, NOT SINCE 1939!");
+    } else {
+        NSLog(@"WHAT'S THAT? SPEAK UP, RYAN!");
+    }
+    
+    return YES;
 }
 
 @end
